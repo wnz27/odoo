@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <!-- 继承res.partner模型的form视图 -->
+        <record id="res_partner_view_form" model="ir.ui.view">
+            <field name="name">鑫博海供应商</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="priority" eval="20" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='xbh_supplier_code']" position="after">
+                    <field name="xbh_supplier_code"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
+
